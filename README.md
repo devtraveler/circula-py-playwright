@@ -1,2 +1,2 @@
 # circula-py-playwright
-This is a java-playwright framework
+This is a python-playwright framework
