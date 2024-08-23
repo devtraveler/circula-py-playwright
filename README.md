@@ -16,6 +16,6 @@ This is a web test automation framework using Python and Playwright, structured 
 
 
 ## Running Tests
-- run this script on the terminal -> python tests/test.py
+- run this script on the terminal -> python tests/test_sign_up.py
 
 
