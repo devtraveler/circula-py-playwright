@@ -20,9 +20,6 @@ def test_select_country_and_verify():
         free_trial_button = page.get_by_role('link', name='Start a free trial')
         free_trial_button.click()
 
-        # Navigate to the signup page
-        # page.goto("https://app.circula.com/users/sign_up")
-
         # Locate the Accept All Button
         accept_all_button = page.get_by_test_id('uc-accept-all-button')
         accept_all_button.click()
