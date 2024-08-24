@@ -1,7 +1,7 @@
 # This file will contain the tests that are related to the sign-up process
-
 import sys
 import os
+import pytest
 
 # Add the project root directory to the sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -11,7 +11,8 @@ from po.login_page import LoginPage
 from po.signup_page import SignUp
 from playwright.sync_api import sync_playwright
 
-def select_sweden_option():
+@pytest.mark.select_sweden_option
+def test_select_sweden_option():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
@@ -23,6 +24,9 @@ def select_sweden_option():
 
         # Navigate to the Circula Website
         page.goto("https://www.circula.com/en")
+
+        # Verify the title of the Circula Website
+        landing_page.verify_title_of_landing_page()
 
         # Click the login link on the landing page
         landing_page.click_login_link(landing_page.login_button)
@@ -51,5 +55,4 @@ def select_sweden_option():
         # Close the browser
         browser.close()
 
-# Run the test
-select_sweden_option()
+

@@ -10,8 +10,8 @@ class SignUp(BasePage):
         self.country_input = page.locator('input[aria-expanded="false"]')
         self.sweden_option = page.locator('text=Sweden')
     
-    # Define methods that are related to the Web Elements above
 
+    # Define methods that are related to the Web Elements
     def click_country_input(self,country_input):
         self.country_input.click()
 

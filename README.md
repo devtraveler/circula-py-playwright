@@ -5,6 +5,7 @@ This is a web test automation framework using Python and Playwright, structured 
 ## Project Structure
 
 - `po/`: Contains page objects representing the web pages.
+- `reports/`: Contains a report.html file.
 - `tests/`: Contains test scripts that execute the test cases.
 - `setup.bat`: A batch file to set up the environment.
 - `requirements.txt`: A file listing the Python dependencies.
@@ -16,6 +17,7 @@ This is a web test automation framework using Python and Playwright, structured 
 
 
 ## Running Tests
-- run this script on the terminal -> python tests/test_sign_up.py
+- Make sure that the virtual environment is opened
+- run this script on the terminal -> pytest --html=reports/report.html --self-contained-html
 
 
